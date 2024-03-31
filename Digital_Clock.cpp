@@ -3,7 +3,7 @@ using namespace std;
 
 class DigitalC{
     private:
-    int hour,sec,min;
+    int hour,min,sec;
 
     public:
     DigitalC(int h,int m,int s):hour(h),min(m),sec(s){
@@ -12,10 +12,10 @@ class DigitalC{
     void DisplayTime(){
         if(hour>0 && hour<=11){
             if(hour==0) hour=12;
-            cout<<"Your Time is : "<<hour<<": "<<min<<": "<<sec<<": "<<"AM";
+            cout<<"Your Time is : "<<endl<<hour<<":"<<min<<":"<<sec<<" "<<"AM"<<endl;
         }else{
             if(hour>12) hour = hour -12;
-            cout<<"Your Time is : "<<hour<<": "<<min<<": "<<sec<<": "<<"AM";
+            cout<<"Your Time is : "<<endl<<hour<<":"<<min<<":"<<sec<<" "<<"AM"<<endl;
         }
     }
 
@@ -33,4 +33,5 @@ int main(){
 DigitalC digital = DigitalC(hours,minutes,seconds);
 digital.DisplayTime();
 
+return 0;
 }
